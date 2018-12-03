@@ -1,0 +1,6 @@
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\bin\Debug\Polinome.dll
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\bin\Debug\Polinome.pdb
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\obj\Debug\Polinome.csprojResolveAssemblyReference.cache
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\obj\Debug\Polinome.dll
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\obj\Debug\Polinome.pdb
+F:\Учёба (политех)\3 семестр\Объектно-ориентированное программирование\Контрольная-2\Polinome\Polinome\obj\Debug\Polinome.csproj.CoreCompileInputs.cache
