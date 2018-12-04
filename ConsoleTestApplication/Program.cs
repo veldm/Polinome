@@ -38,12 +38,6 @@ namespace ConsoleTestApplication
             NewP = P;
             NewP.Sub(P2);
             Console.WriteLine(NewP.ToString());
-            //double[] X2 = { 5, -3, 0, 2 };
-            //Polinome.Polinome p1 = new Polinome.Polinome(X2);
-            //double[] X3 = {-4, 1};
-            //Polinome.Polinome p2 = new Polinome.Polinome(X3);
-            //p1.Div(p2, out Polinome.Polinome Remainder);
-            //Console.WriteLine(p1.ToString());
             NewP = P;
             NewP.Div(P2, out Polinome.Polinome Remainder);
             Console.WriteLine(NewP.ToString());

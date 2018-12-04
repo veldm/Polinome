@@ -44,13 +44,18 @@ namespace Polinome
         /// <returns></returns>
         public override string ToString()
         {
+            if (X.Length == 0) return "0";
             string S = "";
             for (int i = Order; i > 0; i--)
             {
                 if (X[i] != 0)
                 {
                     if (i < Order) if (X[i] < 0)
-                        S = S.Remove(S.Length - 3, 3) + " - ";
+                        {
+                            if (S.Length > 0) S = S.Remove
+                                     (S.Length - 3, 3) + " - ";
+                            else S = "-";
+                        }
                     if (X[i] != 0 && X[i] != 1) S += Math.Abs(X[i]);
                     if (i != 1) S += "x^" + i;
                     else S += "x";
@@ -129,7 +134,7 @@ namespace Polinome
 
         public void Div(Polinome P2, out Polinome Remainder)
         {
-            Remainder = this;
+            Remainder = new Polinome(this.X);
             Polinome Quotient = new Polinome(new double[Remainder.X.Length - P2.X.Length + 1]);
             for (int i = 0; i < Quotient.X.Length; i++)
             {
