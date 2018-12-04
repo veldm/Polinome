@@ -14,7 +14,7 @@ namespace Polinome
         public double[] X;
 
         /// <summary>
-        /// 
+        /// Степень многочлена
         /// </summary>
         public int Order
         {
@@ -32,7 +32,7 @@ namespace Polinome
         /// <summary>
         /// Конструктор с заданием массива коэффициентов
         /// </summary>
-        /// <param name="X"></param>
+        /// <param name="X">Массив коэффициентов</param>
         public Polinome(double[] X)
         {
             this.X = X;
@@ -41,7 +41,7 @@ namespace Polinome
         /// <summary>
         /// Переопределение метода "ToString"
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Строковое представление полинома</returns>
         public override string ToString()
         {
             if (X.Length == 0) return "0";
@@ -69,8 +69,8 @@ namespace Polinome
         /// <summary>
         /// Возвращает значение функции в заданой точке
         /// </summary>
-        /// <param name="X">Заданая точка</param>
-        /// <returns></returns>
+        /// <param name="X">Заданая точка (х)</param>
+        /// <returns>Значение функции (у)</returns>
         public double Value(double X)
         {
             double y = 0;
@@ -84,7 +84,7 @@ namespace Polinome
         /// <summary>
         /// Сложение двух полиномов
         /// </summary>
-        /// <param name="P2"></param>
+        /// <param name="P2">Второе слагаемое</param>
         public void Add(Polinome P2)
         {
             if (Order < P2.Order)
@@ -102,7 +102,7 @@ namespace Polinome
         /// <summary>
         /// Вычитание двух полиномов
         /// </summary>
-        /// <param name="P2"></param>
+        /// <param name="P2">Вычитаемое</param>
         public void Sub(Polinome P2)
         {
             if (Order < P2.Order)
@@ -120,7 +120,7 @@ namespace Polinome
         /// <summary>
         /// Умножение двух полиномов
         /// </summary>
-        /// <param name="P2"></param>
+        /// <param name="P2">Второй множитель</param>
         public void Mul(Polinome P2)
         {
             double[] NewX = new double[Order + P2.Order + 1];
@@ -129,9 +129,14 @@ namespace Polinome
                 {
                     NewX[i + j] += this.X[i] * P2.X[j];
                 }
-            this.X = NewX;
+            X = NewX;
         }
 
+        /// <summary>
+        /// Деление одного полинома на другой
+        /// </summary>
+        /// <param name="P2">Деление</param>
+        /// <param name="Remainder">Остаток от деления</param>
         public void Div(Polinome P2, out Polinome Remainder)
         {
             Remainder = new Polinome(this.X);
